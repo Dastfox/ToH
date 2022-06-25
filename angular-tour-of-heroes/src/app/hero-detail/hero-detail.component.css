@@ -1,18 +1,39 @@
 /* HeroDetailComponent's private CSS styles */
+div
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
 label {
     color: #435960;
     font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   input {
     font-size: 1em;
     padding: .5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   button {
+    display: block;
     margin-top: 20px;
     background-color: #eee;
     padding: 1rem;
+    cursor: pointer;
     border-radius: 4px;
     font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
   }
   button:hover {
     background-color: #cfd8dc;
