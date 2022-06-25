@@ -9,11 +9,11 @@ import { FormsModule } from '@angular/forms' ;
 @NgModule({
   declarations: [
     AppComponent,
-    FormsModule,
     HeroesComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
