@@ -1,4 +1,8 @@
 /* AppComponent's private CSS styles */
+*{
+  background-color:#e2e2e2e8;
+}
+
 h1 {
   margin-bottom: 0;
   text-align: center;
@@ -10,7 +14,7 @@ nav a {
   margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
-  display: inline-block;
+  display: block;
   background-color: #e8e8e8;
   color: #000000;
   border-radius:0.5em;
