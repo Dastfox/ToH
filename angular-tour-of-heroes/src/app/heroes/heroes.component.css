@@ -4,6 +4,7 @@
   list-style-type: none;
   padding: none;
   width: 15em;
+  font-family:Tahoma, Geneva, Verdana, sans-serif;
 }
 .heroes li {
   position: relative;
