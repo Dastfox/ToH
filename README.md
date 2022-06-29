@@ -1,3 +1,3 @@
 # to open serve
-ng serve --open 
+cd angular-tour-of-heroes && ng serve --open 
 
