@@ -33,7 +33,8 @@ export class HeroDetailComponent implements OnInit {
   }
   save(): void {
     if (this.hero) {
-      this.heroService.updateHero(this.hero)
+      const id = Number(this.route.snapshot.paramMap.get('id'));
+      this.heroService.update_Hero(this.hero, id)
         .subscribe(() => this.goBack());
     }
   }
