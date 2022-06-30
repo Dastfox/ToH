@@ -97,12 +97,15 @@ export class HeroService {
   }
 
   /** Patch: update the hero on the server */
-  update_Hero(hero: Hero, id: number): Observable<any> {
+  update_Hero(hero: Hero, id: number, image: string): Observable<any> {
     return this.http.patch(`${this.heroesUrl}/${id}`, hero, this.httpOptions).pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>('updateHero'))
     );
   }
+
+
+
 
   /**
    * Handle Http operation that failed.

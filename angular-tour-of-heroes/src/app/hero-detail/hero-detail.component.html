@@ -6,6 +6,12 @@
     <label for="hero-name">Nom du joueur: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
+  <div>
+    <label for="hero-image">image: </label>
+    <input id="hero-image" [(ngModel)]="hero.image" placeholder="Hero image url"/>
+  </div>
   <button type="button" (click)="goBack()">go back</button>
   <button type="button" (click)="save()">save</button>
+  <img src = "{{hero.image}}" alt="">
+  <h2>{{hero.image}}</h2>
 </div>

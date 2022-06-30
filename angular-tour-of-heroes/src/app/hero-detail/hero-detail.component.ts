@@ -3,13 +3,14 @@ import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { HeroService } from '../hero.service';
+import { elementAt } from 'rxjs';
 
 
 
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css']
+  styleUrls: ['./hero-detail.component.scss']
 })
 export class HeroDetailComponent implements OnInit {
   hero: Hero | undefined;
@@ -25,6 +26,7 @@ export class HeroDetailComponent implements OnInit {
   }
   getHero():void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    const image = String(this.route.snapshot.paramMap.get('image'));
     this.heroService.getHero(id)
     .subscribe(hero => this.hero = hero);
   }
@@ -34,8 +36,11 @@ export class HeroDetailComponent implements OnInit {
   save(): void {
     if (this.hero) {
       const id = Number(this.route.snapshot.paramMap.get('id'));
-      this.heroService.update_Hero(this.hero, id)
+      const image = String(this.route.snapshot.paramMap.get('image'))
+      this.heroService.update_Hero(this.hero, id, image)
         .subscribe(() => this.goBack());
     }
   }
+
 }
+
